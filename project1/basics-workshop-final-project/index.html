@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Order summary card</title>
+  <style>
+   
+    body{
+      background-image: url("file:///C:/Shecodes/project1/order-summary-component-main/images/pattern-background-desktop.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    button{
+      display: block;
+      margin: 0 auto;
+      background: blue;
+      color: white;
+      font-size: 14px;
+      padding: 10px 120px;
+      border: none;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.4);
+      transition: all 200ms ease-in-out;
+
+    }
+    button:hover{
+      background: white;
+      color: blue;
+      cursor: pointer;
+    }
+    .container{
+      display: block;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      max-width: 400px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     
+    }
+    .order-summary{
+      text-align: center;
+      
+    }
+
+    .image{
+      max-width: 100%;
+      border-radius: 10px 10px 0 0;
+      
+    }
+    h1{
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .plan{
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 15px 20px 15px;
+    }
+    .plan-details{
+      display: flex;
+      align-items: center;
+    }
+    .plan-details img{
+      margin-right: 15px;
+    }
+    .plan-details h2{
+      font-size: 18px;
+      color: #1f2d4a;
+      margin: 0;
+    }
+    .plan-details p{
+      font-size: 16px;
+      color: #747F95;
+      margin: 5px 0 0;
+    }
+    
+    .change{
+      color: #A099FF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .change:hover{
+      cursor: pointer;
+    }
+    .cancel{
+      color: #747F95;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .cancel:hover{
+      text-decoration: underline;
+    }
+    .attribution{
+      text-align: center;
+      
+      margin-bottom: 20px;
+      font-size: 10px;
+    }
+
+    @media (min-width: 1440px) {
+    .card {
+        width: 500px;
+    }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="order-summary">
+      <img src="C:\Shecodes\project1\order-summary-component-main\images\illustration-hero.svg" alt="music image" class="image">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!</p>
+    
+        <div class="plan">
+          <div class="plan-details">
+            <img src="C:\Shecodes\project1\order-summary-component-main\images\icon-music.svg" alt="Music Icon">
+            <div>
+              <h2>Annual Plan</h2>
+              <p>$59.99/year</p>
+            </div>
+          </div>
+          <a href="#" class="change">Change</a>
+        </div>
+    <div>
+      <button>Proceed to Payment</button>
+      <a href="#" class="cancel">Cancel Order</a>
+    </div>  
+        </div>
+
+        <div class="attribution">
+          Coded by Diana Nyokabi
+        </div>
+    </div>
+  </div>
+
+  <script>
+    function payButton(){
+      let fullName = prompt("what is your full name");
+      let yourMpesaNo = prompt("what is your Mpesa number");
+      alert("Thank you for shopping with us!");
+    }
+    let payment = document.querySelector("button");
+    payment = addEventListener("click", payButton);
+  </script>
+</body>
+</html>
