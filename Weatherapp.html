@@ -95,5 +95,27 @@
         Change city
     </button>
     <p>coded by Diana Nyokabi</p>
+    <script>
+
+        
+
+        function clickButton (){
+            let city = prompt("What is your city?");
+            let temperature = prompt("What is your city's current tempreture?");
+            let heading = document.querySelector("h1");
+
+            let emoji = "⛅"; 
+
+            if (temperature < 0) {
+                emoji = "😢"; 
+            } else {
+                emoji = "😊"; 
+            }
+             heading.innerHTML = `${emoji}<br>Currently ${temperature}&#176C in ${city}`;
+    
+        }
+        let changeCity = document.querySelector("button");
+        changeCity = addEventListener("click", clickButton);
+    </script>
 </body>
 </html>
